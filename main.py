@@ -40,6 +40,12 @@ def main():
             item.draw(screen)
         #draws screen
         updatable.update(dt)
+        #Checks collision for player and asteroid
+        for ast in asteroids:
+            if ast.collision(player):
+                print("Game over!")
+                pygame.QUIT
+                return
         pygame.display.flip()
 
         #Allows to quit with x on gui
