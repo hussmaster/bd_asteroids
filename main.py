@@ -34,10 +34,11 @@ def main():
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
 
-
+    background_image = pygame.image.load('space.jpg')
     #infinite loop
     while True:
         screen.fill("black")
+        screen.blit(background_image, (0, 0))
         #draws player
         for item in drawable:
             item.draw(screen)
